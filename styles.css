@@ -472,6 +472,9 @@ input[type="text"] {
 
 
 @media only screen and (max-width: 900px) {
+    .mini {
+        flex-direction: column;
+    }
     .hero {
         flex-direction: column;
         padding-top: 100px;
