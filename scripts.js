@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Carousel Functionality
+    // Carousel Functional
     let currentSlide = 0;
     const testimonials = document.querySelectorAll(".testimonial");
     const prev = document.querySelector(".prev");
