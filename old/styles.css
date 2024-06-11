@@ -1,0 +1,502 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 1000, 0.1);
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    border-bottom: 1px solid #c9bbad;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem 1rem;
+}
+
+.nav-buttons {
+    display: flex;
+}
+
+button {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    border: none;
+    border-radius: 4px;
+}
+
+.login {
+    background-color: transparent;
+    color: #333;
+}
+
+.create-account {
+    padding: .5rem 1rem;
+    background-color: rgb(35, 199, 236);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color .3s;
+}
+.create-account:hover {
+    background-color: rgb(26, 173, 206);
+}
+.banner-bg {
+    background: url('bg.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.hero h1 {
+    padding-top: 20px; 
+    margin-bottom: 0.5rem;
+    font-size: 3rem;
+    color: #333;
+}
+.hero h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #666;
+}
+
+.hero p, .hero ul {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.search-container {
+    margin-bottom: 1rem;
+}
+
+input[type="text"] {
+    padding: 1rem;
+    border: 1px solid rgb(220, 220, 220);
+    border-radius: 4px;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.search-btn {
+    padding: 1rem 1.5rem;
+    background-color: rgb(35, 199, 236);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+.search-btn:hover {
+    background-color: rgb(26, 173, 206);
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.track-order {
+    background-color: green;
+    color: white;
+}
+
+.no-charge {
+    background-color: red;
+    color: white;
+}
+
+.feature-list {
+    list-style: none; /* Removes default list bullets */
+    padding-left: 0; /* Aligns list content to the left */
+}
+
+.feature-list li {
+    margin-bottom: 1em; /* Adds space between list items */
+    padding-left: 1.5em; /* Adds space inside each list item */
+    position: relative; /* Allows absolute positioning relative to each li */
+    line-height: 1.5; /* Adjusts the line height for better readability */
+}
+
+.feature-list li::before {
+    content: '✔'; /* Adds a custom bullet point */
+    color: #32a852; /* Custom color for the bullet point */
+    font-size: 1.2em; /* Size of the custom bullet */
+    position: absolute; /* Positions the bullet absolutely within the li */
+    left: 0; /* Aligns the bullet to the left */
+    top: 50%; /* Centers the bullet vertically */
+    transform: translateY(-50%); /* Ensures the bullet is perfectly centered */
+}
+
+.feature-title {
+    font-weight: bold; /* Makes the feature title bold */
+    color: #333; /* Dark color for the feature title for contrast */
+    margin-right: 0.5em; /* Adds space after the feature title */
+}
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: space-between; /* Places content and image apart */
+    padding: 20px 40px 20px 40px;
+    background: linear-gradient(120deg, #d3e6fc 0%, #e9f9fb 100%);
+}
+
+.content {
+    flex: 1; /* Allows the text content to fill the space */
+    padding-right: 50px;
+    padding-left: 20px; /* Adds some space between the text and the image */
+}
+
+.hero-image {
+    width: 50%; /* Adjust based on your preference */
+    height: auto; /* Keeps the image aspect ratio */
+    flex: 1; /* Allows the image to fill the available space */
+}
+
+
+.features {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 20px 80px 20px;
+    background-color: #ffedd6; /* Assuming a light grey background */
+}
+
+.mini-bg {
+    background: linear-gradient(120deg, #ffd9a0 0%, #ffdced 100%);
+    
+}
+.mini {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0px;
+}
+.mini h2 {
+    font-size: 2rem;
+}
+
+.feature-item {
+    text-align: center;
+    width: 23%; /* Splits the section into four columns */
+}
+
+.feature-item img {
+    width: 100px; /* Assuming a fixed size for icons */
+    margin-bottom: 10px;
+}
+
+.feature-item h3 {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.feature-item p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.testimonials {
+    background: url('bg.png');
+    background-color: rgba(255, 255, 255, 0.75); /* Adjust color and opacity */
+    background-blend-mode: lighten; /* Darken the image */
+    padding: 40px 0; /* Top and bottom padding */
+    text-align: center; /* Center aligns the content */
+    box-shadow: 0px 0px 20px inset rgba(0,0,0,.2);
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    padding-bottom: 10px;
+}
+
+.container {
+    max-width: 800px; /* Limits the width of testimonials */
+    margin: 0 auto; /* Centers the container */
+    padding: 0 20px; /* Padding on the sides */
+}
+
+.testimonial {
+    background-color: #ffffff; /* Background color for individual testimonials */
+    border-left: 4px solid rgb(35, 199, 236); /* Accent border on the left */
+    margin: 20px 0; /* Margin between testimonials */
+    padding: 20px; /* Padding inside testimonials */
+    position: relative; /* For positioning elements inside */
+    font-style: italic; /* Italicize quote text */
+    box-shadow: 0px 0px 20px rgba(0,0,0,.2);
+}
+
+.testimonial footer {
+    font-style: normal; /* Normal font style for the footer */
+    text-align: right; /* Aligns the citation to the right */
+    margin-top: 20px; /* Margin top for spacing */
+    color: #666666; /* Color for the footer text */
+}
+
+.testimonial::before {
+    content: open-quote; /* Adds opening quote */
+    font-size: 50px; /* Size of the quote mark */
+    position: absolute; /* Positioning within testimonial */
+    top: -10px; /* Positioning */
+    left: -10px; /* Positioning */
+    color: rgb(35, 199, 236); /* Color of the quote mark */
+}
+
+.testimonial::after {
+    content: close-quote; /* Adds closing quote */
+    font-size: 50px; /* Size of the quote mark */
+    position: absolute; /* Positioning within testimonial */
+    bottom: -10px; /* Positioning */
+    right: -10px; /* Positioning */
+    color: rgb(35, 199, 236); /* Color of the quote mark */
+}
+
+.how-it-works {
+    background-color: #f9f9f9;
+    padding: 40px;
+    text-align: center;
+    border-top: 1px solid #c9bbad;
+    border-bottom: 1px solid #c9bbad;
+}
+
+.how-it-works h2 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.step {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    width: 30%; /* Adjust based on your layout preference */
+    text-align: center;
+}
+
+.step img {
+    width: 100px; /* Adjust the size based on your icons */
+    margin-bottom: 15px;
+}
+
+.step h3 {
+    color: rgb(35, 199, 236); /* Theme color for step numbers */
+    margin-bottom: 10px;
+}
+
+.step p {
+    color: #666; /* Soft color for text for readability */
+    font-size: 16px;
+}
+
+.waitlist-section {
+    background: linear-gradient(120deg, #92b9e6 0%, #598aca 100%); /* Pastel gradient background */
+    background: url('polka.jpeg');
+    background-size: 2%;
+    padding: 50px 0;
+    text-align: center;
+    border-top: 1px solid #c9bbad;
+}
+
+.waitlist-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 1); /* Light background for the form area */
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.waitlist-section h2 {
+    margin-bottom: 20px;
+    color: #5D5D5D; /* Dark color for the heading for contrast */
+}
+
+.waitlist-section p {
+    margin-bottom: 40px;
+    color: #6A6A6A; /* Soft color for the text */
+}
+
+.waitlist-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.waitlist-form input {
+    flex-grow: 1; /* Makes the input field expand to fill available space */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #CCCCCC; /* Light border for the input */
+}
+
+.waitlist-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6A5ACD; /* A soft but contrasting button color */
+    color: white;
+    cursor: pointer; /* Cursor effect on hover */
+    transition: background-color 0.3s; /* Transition for a hover effect */
+}
+
+.waitlist-form button:hover {
+    background-color: #5f49c8; /* Slightly darker shade on hover for the button */
+}
+
+.site-footer {
+    background: linear-gradient(120deg, #ffd9a0 0%, #ffdced 100%);
+    color: #978d83; /* Darker text for better contrast */
+    font-family: Arial, sans-serif; /* Example font */
+    padding: 20px 0;
+    font-size: 15px;
+    border-top: 1px solid #c9bbad;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #c9bbad; /* Light border for separation */
+}
+
+.logo-area h2 {
+    color: #978d83; /* Pastel color for the logo */
+    margin-bottom: 5px;
+}
+
+.logo-area p {
+    color: #978d83; /* Pastel color for the slogan */
+    font-size: 14px;
+}
+
+.footer-nav ul {
+    list-style-type: none;
+    padding: 0px 10px;
+}
+
+.footer-nav ul li h3 {
+    color: #978d83; /* Pastel color for the section titles */
+    margin-bottom: 10px;
+}
+
+.footer-nav ul li {
+    margin-bottom: 5px;
+    color: #978d83; /* Soft text color */
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #978d83; /* Soft text color for links */
+    margin-right: 15px;
+}
+
+.social-links a:hover {
+    color: #555; /* Slightly darker on hover */
+}
+
+@media (max-width: 768px) {
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-nav {
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .waitlist-form {
+        flex-direction: column;
+    }
+
+    .waitlist-form input,
+    .waitlist-form button {
+        width: 100%; /* Full width for mobile */
+        margin-bottom: 10px; /* Space between input and button */
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+    .mini {
+        flex-direction: column;
+    }
+    .hero {
+        flex-direction: column;
+        padding-top: 100px;
+        padding: 100px 0px 0px 0px;
+        text-align: center;
+    }
+    .features {
+        flex-direction: column;
+    }
+    .feature-item {
+        padding-bottom: 20px; /* Splits the section into four columns */
+        width: 80%;
+    }
+    .hero-image {
+        width: 75%; /* Adjust based on your preference */
+    }
+    .steps-container {
+        flex-direction: column;
+    }
+    .step {
+        width: 80%; /* Adjust for mobile screens */
+        margin: 10px auto; /* Center align the steps */
+    }
+    
+}
