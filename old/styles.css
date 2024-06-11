@@ -437,7 +437,7 @@ input[type="text"] {
 }
 
 .social-links a:hover {
-    color: #555; /* Slightly darker on hover */
+    color: #555555; /* Slightly darker on hover */
 }
 
 @media (max-width: 768px) {
